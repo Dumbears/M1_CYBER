@@ -1,4 +1,4 @@
-🌞 Empoisonnez la table ARP de node2.tp1.my
+#🌞 Empoisonnez la table ARP de node2.tp1.my
 Ouvrir un terminal dans node2.tp1.my
 arp
 Address                  HWtype  HWaddress           Flags Mask            Iface
@@ -20,11 +20,11 @@ Address                  HWtype  HWaddress           Flags Mask            Iface
 10.1.1.11                ether   00:15:5d:01:01:04   C                     eth0
 10.1.1.100               ether   00:15:5d:01:01:01   C                     eth0
 
-🌞 Ecrire un script Scapy qui fait le travail de arpspoof
+#🌞 Ecrire un script Scapy qui fait le travail de arpspoof
 Le [script python](./arp_spoof.py)
 La [capture Wireshark](./arp_spoof_2.pcap)
 
-🌞 Mettre en place un MITM ARP
+#🌞 Mettre en place un MITM ARP
 sudo firewall-cmd --add-masquerade --permanent
 sudo firewall-cmd --reload
 
