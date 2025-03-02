@@ -14,7 +14,8 @@ for ip_add in possible_ips:
     # Ports utilises pour les requetes DHCP
 	udp = UDP(sport=68, dport=67)
     # Requete DHCP avec une MAC aleatoire
-    bootp = BOOTP(op=1,chaddr ="00:15:5d:01:01:01")
+    bootp = BOOTP(op=1,chaddr = mac2str("00:15:5d:01:01:01"))
+    	pass
 	# Envoie une requete DHCP Discover pour demander l'attribution de l'IP "ip_add" 
 	# (ex: 10.1.1.101, 10.1.1.102...) au serveur DHCP 10.1.1.10.
 	dhcp = DHCP(options=[
