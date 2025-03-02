@@ -1,22 +1,21 @@
-TP4
-🌞 Ping !
+#🌞 Ping !
 ping 10.1.1.253
 ping 10.1.1.100
 ping 10.1.1.101
 
 
 
-🌞 Nommez les machines
+# 🌞 Nommez les machines
 sudo hostnamectl set-hostname dhcp.tp1.my
 sudo hostnamectl set-hostname node1.tp1.my
 sudo hostnamectl set-hostname node2.tp1.my
 
-🌞 Fermer tous les ports inutilement ouverts dans le firewall
+# 🌞 Fermer tous les ports inutilement ouverts dans le firewall
 sudo firewall-cmd --permanent --remove-service dhcpv6-client
 sudo firewall-cmd --permanent --remove-service cockpit
 sudo firewall-cmd --reload
 
-🌞 Remplir le fichier hosts
+# 🌞 Remplir le fichier hosts
 127.0.0.1   localhost
 ::1         localhost
 10.1.1.253  dhcp.tp1.my
@@ -24,7 +23,7 @@ sudo firewall-cmd --reload
 10.1.1.101  node2.tp1.my
 10.1.1.101  node2
 
-un ping node2.tp1.my
+# Un ping node2.tp1.my
 [administrateur@node1 ~]$ ping node2.tp1.my
 PING node2.tp1.my (10.1.1.101) 56(84) bytes of data.
 64 bytes from node2.tp1.my (10.1.1.101): icmp_seq=1 ttl=64 time=0.861 ms
