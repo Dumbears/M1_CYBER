@@ -1,6 +1,6 @@
 
 !
-! Last configuration change at 11:12:39 UTC Tue Mar 4 2025
+! Last configuration change at 11:34:44 UTC Tue Mar 4 2025
 !
 version 15.2
 service timestamps debug datetime msec
@@ -21,6 +21,7 @@ no aaa new-model
 !
 !
 !
+ip arp inspection vlan 10,20,30
 ip arp inspection filter DAI vlan  10,20,30
 !
 !
@@ -89,6 +90,7 @@ arp access-list DAI
  permit ip host 10.2.20.254 mac host ca01.0c18.0000 
  permit ip host 10.2.30.1 mac host 0050.7966.6809 
  permit ip host 10.2.30.254 mac host ca01.0c18.0000 
+ deny ip any mac any 
 arp 10.2.10.1 0050.7966.6805 ARPA
 arp 10.2.10.2 0050.7966.6807 ARPA
 arp 10.2.10.254 ca01.0c18.0000 ARPA
