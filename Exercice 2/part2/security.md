@@ -21,31 +21,13 @@ arp 10.2.30.1 00:50:79:66:68:09 ARPA
 arp 10.2.30.254 ca01.0c18.0000 ARPA
 
 
-ip arp inspection vlan 10
-ip arp inspection vlan 20
-ip arp inspection vlan 30
-
-
-ip arp inspection trust
-
-
 access1
 interface Ethernet0/0
 ip arp inspection trust
-interface Ethernet0/1
-ip arp inspection untrust
-interface Ethernet0/2
-ip arp inspection untrust
 
 access2
 interface Ethernet0/0
 ip arp inspection trust
-interface Ethernet0/1
-ip arp inspection untrust
-interface Ethernet0/2
-ip arp inspection untrust
-interface Ethernet0/3
-ip arp inspection untrust
 
 core1
 interface Ethernet0/0
@@ -54,3 +36,83 @@ interface Ethernet0/1
 ip arp inspection trust
 interface Ethernet0/2
 ip arp inspection trust
+
+
+arp access-list DAI
+permit ip host 10.2.10.1 mac host 00:50:79:66:68:05
+permit ip host 10.2.10.2 mac host 00:50:79:66:68:07
+permit ip host 10.2.10.254 mac host ca01.0c18.0000
+permit ip host 10.2.20.1 mac host 00:50:79:66:68:06
+permit ip host 10.2.20.2 mac host 00:50:79:66:68:08
+permit ip host 10.2.20.254 mac host ca01.0c18.0000
+permit ip host 10.2.30.1 mac host 00:50:79:66:68:09
+permit ip host 10.2.30.254 mac host ca01.0c18.0000
+deny ip any mac any
+
+ip arp inspection filter DAI vlan 10
+ip arp inspection filter DAI vlan 20
+ip arp inspection filter DAI vlan 30
+
+ip arp inspection vlan 10
+ip arp inspection vlan 20
+ip arp inspection vlan 30
+
+
+
+
+# 🌞 Activer BPDUGuard sur vos switches par port sauf ceux qui sont connectés vers les autres switches
+
+Sur access1, access2 et core1
+spanning-tree portfast edge bpduguard default
+
+access1
+interface Ethernet0/0
+spanning-tree bpduguard disable
+
+
+access2
+interface Ethernet0/0
+spanning-tree bpduguard disable
+
+core1
+interface Ethernet0/0
+spanning-tree bpduguard disable
+exit
+interface Ethernet0/1
+spanning-tree bpduguard disable
+exit
+interface Ethernet0/2
+spanning-tree bpduguard disable
+
+Exemple pour vérifier que c'est bien activé
+core1#show spanning-tree summary               
+Switch is in pvst mode
+Root bridge for: VLAN0001, VLAN0010, VLAN0020, VLAN0030
+Extended system ID                      is enabled
+Portfast Default                        is disabled
+Portfast Edge BPDU Guard Default        is enabled
+Portfast Edge BPDU Filter Default       is disabled
+Loopguard Default                       is disabled
+PVST Simulation Default                 is enabled but inactive in pvst mode
+Bridge Assurance                        is enabled but inactive in pvst mode
+EtherChannel misconfig guard            is enabled
+Configured Pathcost method used is short
+UplinkFast                              is disabled
+BackboneFast                            is disabled
+
+Name                   Blocking Listening Learning Forwarding STP Active
+---------------------- -------- --------- -------- ---------- ----------
+VLAN0001                     0         0        0          1          1
+VLAN0010                     0         0        0          3          3
+VLAN0020                     0         0        0          3          3
+VLAN0030                     0         0        0          3          3
+---------------------- -------- --------- -------- ---------- ----------
+4 vlans                      0         0        0         10         10
+
+# 🌞 La running-config des 4 équipements réseau
+
+Running-config [R1](./part2/r1_running-config.md)
+Running-config [core1](./part2/core1_running-config.md)
+Running-config [access1](./part2/access1_running-config.md)
+Running-config [access2](./part2/access2_running-config.md)
+
