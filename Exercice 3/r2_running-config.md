@@ -1,7 +1,6 @@
-r2#show running-config 
 Building configuration...
 
-Current configuration : 1108 bytes
+Current configuration : 1435 bytes
 !
 version 15.2
 service timestamps debug datetime msec
@@ -26,6 +25,7 @@ no ipv6 cef
 !         
 !
 multilink bundle-name authenticated
+!
 !
 !
 !
@@ -85,7 +85,11 @@ ip forward-protocol nd
 !
 no ip http server
 no ip http secure-server
+ip route 0.0.0.0 0.0.0.0 10.99.99.1
 !
+access-list 1 permit 10.3.10.0 0.0.0.255
+access-list 1 permit 10.3.20.0 0.0.0.255
+access-list 1 permit 10.3.30.0 0.0.0.255
 !
 !
 !
