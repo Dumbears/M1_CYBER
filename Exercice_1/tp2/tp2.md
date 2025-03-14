@@ -26,6 +26,10 @@ systemctl enable --now dhcpd
 firewall-cmd --add-service=dhcp
 firewall-cmd --runtime-to-permanent
 ```
+# 🌞 Demander une adresse IP depuis node1.tp1.my  
+```bash  
+sudo dhclient -v eth0
+```
 
 # Capture DHCP  
 ```bash
