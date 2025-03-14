@@ -1,4 +1,4 @@
-🌞 Installer un service DHCP sur la machine dhcp.tp1.my  
+# 🌞 Installer un service DHCP sur la machine dhcp.tp1.my  
 ```bash
 dnf -y install dhcp-server
 nano /etc/dhcp/dhcpd.conf
