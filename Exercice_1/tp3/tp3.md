@@ -31,3 +31,4 @@ Network Distance: 1 hop
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 17.20 seconds
 ```  
+🦈 Capture Service Scan --> [nmap_2.pcap](nmap_2.pcap)
