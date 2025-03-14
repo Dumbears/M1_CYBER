@@ -1,17 +1,18 @@
 # 🌞 Définir une adresse IP statique sur chaque machine  
 Ci dessous, les fichiers de configuration d'interface pour chaque machines  
 node1 : [ifcfg-node1.md](./ifcfg-node1.md)  
-node1 : [ifcfg-node2.md](./ifcfg-node2.md)  
-node1 : [ifcfg-nodedhcp.md](./ifcfg-nodedhcp.md)  
+node2 : [ifcfg-node2.md](./ifcfg-node2.md)  
+nodedhcp : [ifcfg-nodedhcp.md](./ifcfg-nodedhcp.md)  
 
 # 🌞 Ping !
 ping 10.1.1.253  
 ping 10.1.1.100  
 ping 10.1.1.101  
 
+🦈 Capture ICMP  --> [ping_1.pcap](./ping_1.pcap)
 
 
-# 🌞 Nommez les machines
+# 🌞 Nommez les machines  
 sudo hostnamectl set-hostname dhcp.tp1.my  
 sudo hostnamectl set-hostname node1.tp1.my  
 sudo hostnamectl set-hostname node2.tp1.my  
