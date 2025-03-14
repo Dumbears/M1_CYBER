@@ -63,3 +63,5 @@ PING node2.tp1.my (10.1.1.101) 56(84) bytes of data.
 64 bytes from node2.tp1.my (10.1.1.101): icmp_seq=2 ttl=64 time=0.399 ms  
 64 bytes from node2.tp1.my (10.1.1.101): icmp_seq=3 ttl=64 time=1.12 ms  
 64 bytes from node2.tp1.my (10.1.1.101): icmp_seq=4 ttl=64 time=3.55 ms  
+
+🦈 Capture ARP --> [arp_1.pcap](arp_1.pcap)
