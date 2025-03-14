@@ -66,7 +66,7 @@ Le [script python](./arp_spoof_2.py)
 🦈 Capture ARP Spoof --> [arp_mitm_1.pcap](./arp_mitm_1.pcap)  
   
 ```bash
-sudo python arp_mitm_1.py
+sudo python arp_spoof_2.py
 ```  
 
 Ouvrir un terminal dans node2.tp1.my  
