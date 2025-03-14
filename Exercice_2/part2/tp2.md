@@ -125,17 +125,12 @@ VLAN0030                     0         0        0          3          3
 
 # 🌞 La running-config des 4 équipements réseau
 
-Running-config [R1](./part2/r1_running-config.md)
-Running-config [core1](./part2/core1_running-config.md)
-Running-config [access1](./part2/access1_running-config.md)
-Running-config [access2](./part2/access2_running-config.md)
+Running-config [R1](./part2/r1_running-config.md)  
+Running-config [core1](./part2/core1_running-config.md)  
+Running-config [access1](./part2/access1_running-config.md)  
+Running-config [access2](./part2/access2_running-config.md)  
 
 
-🌞 Ajouter la VM à la topologie
-🌞 Essayer de mener une attaque ARP poisoning
-🌞 Tirer un câble entre les deux switches d'accès
-🌞 Déterminer quels ports ont été fermés
-🌞 Déterminer qui est le root bridge
-🌞 Couper l'un des autres liens
-
-🦈 Capture STP -->
+Partie 5 et 6 non faites  
+![Texte alternatif](../../images/rien.gif)
+rien.gif
