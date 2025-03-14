@@ -33,7 +33,17 @@ sudo tcpdump -w dhcp_1.pcap
 ```  
 SFTP de la VM à mon PC, puis extraction des 4 lignes
 
-Afficher le bail DHCP serveur
+
+
+
+
+
+
+
+🦈 Capture DHCP --> [dhcp_1.pcap](dhcp_1.pcap)
+
+
+# 🌞 Afficher le bail DHCP serveur  
 ```bash
 sudo grep -A10 "node1" /var/lib/dhcpd/dhcpd.leases
   client-hostname "node1";
@@ -47,4 +57,5 @@ lease 10.1.1.101 {
   rewind binding state free;
   hardware ethernet 00:15:5d:01:01:05;
 }
-```
+```  
+
