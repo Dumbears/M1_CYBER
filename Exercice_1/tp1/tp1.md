@@ -24,7 +24,7 @@ sudo hostnamectl set-hostname node2.tp1.my
 sudo firewall-cmd --permanent --remove-service dhcpv6-client  
 sudo firewall-cmd --permanent --remove-service cockpit  
 sudo firewall-cmd --reload  
-
+```  
 # 🌞 Remplir le fichier hosts
 127.0.0.1   localhost  
 ::1         localhost  
