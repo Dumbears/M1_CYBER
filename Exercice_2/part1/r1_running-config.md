@@ -1,3 +1,4 @@
+```bash
 r1#show running-config
 Building configuration...
 
@@ -107,3 +108,4 @@ line vty 0 4
 !
 !
 end
+```
