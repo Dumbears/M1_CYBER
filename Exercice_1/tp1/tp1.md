@@ -37,13 +37,13 @@ PING node2 (10.1.1.101) 56(84) bytes of data.
 64 bytes from node2.tp1.my (10.1.1.101): icmp_seq=2 ttl=64 time=0.805 ms  
 64 bytes from node2.tp1.my (10.1.1.101): icmp_seq=3 ttl=64 time=1.72 ms  
 
-🌞 Table ARP
+# 🌞 Table ARP  
 ip neigh show  
 [administrateur@node1 ~]$ ip neigh show  
 10.1.1.253 dev eth0 lladdr 00:15:5d:01:01:04 DELAY   
 10.1.1.101 dev eth0 lladdr 00:15:5d:01:01:05 STALE   
 
-🌞 Manipuler la table ARP
+# 🌞 Manipuler la table ARP  
 ip neigh show  
 [administrateur@node1 ~]$ ip neigh show  
 10.1.1.253 dev eth0 lladdr 00:15:5d:01:01:04 DELAY  
