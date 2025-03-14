@@ -1,5 +1,5 @@
-Installer un service DHCP sur la machine dhcp.tp1.my
-
+🌞 Installer un service DHCP sur la machine dhcp.tp1.my  
+```bash
 dnf -y install dhcp-server
 nano /etc/dhcp/dhcpd.conf
 
@@ -25,10 +25,12 @@ subnet 10.1.1.0 netmask 255.255.255.0 {
 systemctl enable --now dhcpd
 firewall-cmd --add-service=dhcp
 firewall-cmd --runtime-to-permanent
+```
 
-
-capture DHCP
+capture DHCP  
+```bash
 sudo tcpdump -w dhcp_1.pcap
+```  
 SFTP de la VM à mon PC, puis extraction des 4 lignes
 
 Afficher le bail DHCP serveur
