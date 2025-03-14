@@ -13,7 +13,7 @@
 
 
 # 🌞 Serveur DHCP, si c'est un serveur dédié
-N'ayant pas réussi ) intégré le serveur DHCP en suivant le tuto, J'ai ajouté un 3ème routeur avec seulement la fonction DHCP  
+N'ayant pas réussi à intégré le serveur DHCP en suivant le tuto, J'ai ajouté un 3ème routeur avec seulement la fonction DHCP  
 Il est branché au switch d'accès 7 (sw7)  
 
 # 🌞 Depuis pc4.tp3.my  

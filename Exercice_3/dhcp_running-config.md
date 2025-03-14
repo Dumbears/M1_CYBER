@@ -1,3 +1,4 @@
+```bash
 Building configuration...
 
 Current configuration : 1125 bytes
@@ -100,3 +101,4 @@ line vty 0 4
 !
 !
 end
+```

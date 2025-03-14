@@ -131,6 +131,6 @@ Running-config [access1](./part2/access1_running-config.md)
 Running-config [access2](./part2/access2_running-config.md)  
 
 
-Partie 5 et 6 non faites  
+Parties 5 et 6 non faites  
 Intervenant être comme :  
 ![Texte alternatif](../../images/rien.gif)
