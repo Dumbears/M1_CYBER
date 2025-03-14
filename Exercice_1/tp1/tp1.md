@@ -1,6 +1,8 @@
-# 🌞 Définir une adresse IP statique sur chaque machine
-Ci dessous, les fichiers de configuration d'interface pour chaque machines
-node1 : [ifcfg-node1.md](./ifcfg-node1.md)
+# 🌞 Définir une adresse IP statique sur chaque machine  
+Ci dessous, les fichiers de configuration d'interface pour chaque machines  
+node1 : [ifcfg-node1.md](./ifcfg-node1.md)  
+node1 : [ifcfg-node2.md](./ifcfg-node2.md)  
+node1 : [ifcfg-nodedhcp.md](./ifcfg-nodedhcp.md)  
 
 # 🌞 Ping !
 ping 10.1.1.253  
