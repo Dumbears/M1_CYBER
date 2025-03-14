@@ -1,4 +1,4 @@
-
+```bash
 !
 ! Last configuration change at 11:31:04 UTC Tue Mar 4 2025
 !
@@ -110,3 +110,4 @@ line vty 0 4
 !
 !
 end
+```
