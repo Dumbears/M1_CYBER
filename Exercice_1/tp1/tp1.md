@@ -30,7 +30,7 @@ sudo firewall-cmd --reload
 10.1.1.101  node2.tp1.my  
 10.1.1.101  node2  
 
-# Un ping node2.tp1.my
+Ping node2.tp1.my  
 [administrateur@node1 ~]$ ping node2.tp1.my  
 PING node2.tp1.my (10.1.1.101) 56(84) bytes of data.  
 64 bytes from node2.tp1.my (10.1.1.101): icmp_seq=1 ttl=64 time=0.861 ms  
@@ -38,6 +38,7 @@ PING node2.tp1.my (10.1.1.101) 56(84) bytes of data.
 64 bytes from node2.tp1.my (10.1.1.101): icmp_seq=3 ttl=64 time=0.324 ms  
 64 bytes from node2.tp1.my (10.1.1.101): icmp_seq=4 ttl=64 time=0.570 ms  
 
+Ping node2  
 [administrateur@node1 ~]$ ping node2  
 PING node2 (10.1.1.101) 56(84) bytes of data.  
 64 bytes from node2.tp1.my (10.1.1.101): icmp_seq=1 ttl=64 time=0.489 ms  
