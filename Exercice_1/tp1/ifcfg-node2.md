@@ -1,3 +1,4 @@
+```bash
 DEVICE=eth0
 NAME=lan
 
@@ -18,3 +19,4 @@ BOOTPROTO=dhcp
        valid_lft 86324sec preferred_lft 86324sec
     inet6 fe80::215:5dff:fe01:105/64 scope link noprefixroute 
        valid_lft forever preferred_lft forever
+```

@@ -1,3 +1,4 @@
+```bash
 [administrateur@dhcp conf.d]$ ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -9,3 +10,4 @@
     link/ether 00:15:5d:01:01:03 brd ff:ff:ff:ff:ff:ff
     inet 10.1.1.253/24 brd 10.1.1.255 scope global noprefixroute eth0
        valid_lft forever preferred_lft forever
+```
