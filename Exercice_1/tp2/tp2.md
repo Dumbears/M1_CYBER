@@ -27,18 +27,11 @@ firewall-cmd --add-service=dhcp
 firewall-cmd --runtime-to-permanent
 ```
 
-capture DHCP  
+# Capture DHCP  
 ```bash
 sudo tcpdump -w dhcp_1.pcap
 ```  
 SFTP de la VM à mon PC, puis extraction des 4 lignes
-
-
-
-
-
-
-
 
 🦈 Capture DHCP --> [dhcp_1.pcap](dhcp_1.pcap)
 
