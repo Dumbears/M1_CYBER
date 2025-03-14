@@ -132,5 +132,5 @@ Running-config [access2](./part2/access2_running-config.md)
 
 
 Partie 5 et 6 non faites  
+Intervenant être comme :  
 ![Texte alternatif](../../images/rien.gif)
-rien.gif
