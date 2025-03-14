@@ -11,6 +11,6 @@ cat fichier | grep pattern | wc -l
 
 # 🌞 Preuve de DOS du réseau  
 J'ai pas la preuve mais j'ai réussi be like :  
-![Texte alternatif](./M1_CYBER/images/source.png)
-![Texte alternatif](./M1_CYBER/images/trust.jpg)
+![Texte alternatif](M1_CYBER/images/source.png)
+![Texte alternatif](M1_CYBER/images/trust.jpg)
 
