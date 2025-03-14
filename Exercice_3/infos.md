@@ -1,22 +1,23 @@
-🌞 show-run sur tous les équipements Cisco
-[DHCP](./dhcp_running-config.md)
-[R1](./r1_running-config.md)
-[R2](./r2_running-config.md)
-[sw1](./sw1_running-config.md)
-[sw2](./sw2_running-config.md)
-[sw3](./sw3_running-config.md)
-[sw4](./sw4_running-config.md)
-[sw5](./sw5_running-config.md)
-[sw6](./sw6_running-config.md)
-[sw7](./sw7_running-config.md)
+# 🌞 show-run sur tous les équipements Cisco
+[DHCP](./dhcp_running-config.md)  
+[R1](./r1_running-config.md)  
+[R2](./r2_running-config.md)  
+[sw1](./sw1_running-config.md)  
+[sw2](./sw2_running-config.md)  
+[sw3](./sw3_running-config.md)  
+[sw4](./sw4_running-config.md)  
+[sw5](./sw5_running-config.md)  
+[sw6](./sw6_running-config.md)  
+[sw7](./sw7_running-config.md)  
 
 
 
-🌞 Serveur DHCP, si c'est un serveur dédié
-N'ayant pas réussi ) intégré le serveur DHCP en suivant le tuto, J'ai ajouté un 3ème routeur avec seulement la fonction DHCP
-Il est branché au switch d'accès 7 (sw7)
+# 🌞 Serveur DHCP, si c'est un serveur dédié
+N'ayant pas réussi ) intégré le serveur DHCP en suivant le tuto, J'ai ajouté un 3ème routeur avec seulement la fonction DHCP  
+Il est branché au switch d'accès 7 (sw7)  
 
-🌞 Depuis pc4.tp3.my
+# 🌞 Depuis pc4.tp3.my  
+```bash
 VPCS> ip dhcp
 DORA IP 10.3.10.1/24 GW 10.3.10.254
 
@@ -30,13 +31,17 @@ VPCS> ping 10.3.30.11
 
 VPCS> ping ynov.com
 Cannot resolve ynov.com
-Pas réussi. J'ai fait un [tcpdump](./debug_ping_ynov.com.pcap) sur mon R1. Il voit bien les paquets passer mais "no response found". Comme si il ne savait pas où renvoyer.
-J'ai pourtant mis une ip route sur R1 et R2
+```  
+
+Pas réussi.  
+J'ai fait un [tcpdump](./debug_ping_ynov.com.pcap) sur mon R1. Il voit bien les paquets passer mais "no response found". Comme si il ne savait pas où renvoyer.  
+J'ai pourtant mis une ip route sur R1 et R2...  
+```bash
 ip route 0.0.0.0 0.0.0.0 10.99.99.1
+```  
 
-
-
-🌞 Depuis pc2.tp3.my
+# 🌞 Depuis pc2.tp3.my  
+```bash
 VPCS> ip dhcp
 DDORA IP 10.3.20.1/24 GW 10.3.20.254
 
@@ -50,16 +55,13 @@ VPCS> ping 10.3.30.11
 
 VPCS> ping ynov.com
 Cannot resolve ynov.com
-Même problème que pour pc4.tp3.my
+```  
+Même problème que pour pc4.tp3.my  
 
+# 🌞 Vérifier, à l'aide de commandes dédiées
 
-
-
-
-🌞 Vérifier, à l'aide de commandes dédiées
-
-Etat de l'agrégation LACP entre sw1 et sw2
-
+Etat de l'agrégation LACP entre sw1 et sw2  
+```bash
 sw1#show etherchannel 1 detail        
 Group state = L2 
 Ports: 2   Maxports = 4
@@ -154,8 +156,10 @@ FastEthernet0/0.30 - Group 30
   Standby router is unknown
   Priority 100 (default 100)
   Group name is "hsrp-Fa0/0.30-30" (default)
+```
 
-
+r2  
+```bash
 r2#show standby
 FastEthernet0/0.10 - Group 10
   State is Active
@@ -196,11 +200,12 @@ FastEthernet0/0.30 - Group 30
   Standby router is unknown
   Priority 150 (configured 150)
   Group name is "hsrp-Fa0/0.30-30" (default)
+```
 
-
-Etat de STP, par VLAN
-
-Core
+Etat de STP, par VLAN  
+Core  
+sw1  
+```bash
 sw1#show spanning-tree summary
 Switch is in pvst mode
 Root bridge for: VLAN0001, VLAN0010, VLAN0020, VLAN0030
@@ -224,10 +229,11 @@ VLAN0020                     0         0        0          4          4
 VLAN0030                     0         0        0          4          4
 ---------------------- -------- --------- -------- ---------- ----------
 4 vlans                      0         0        0         15         15
+```
 
 
-
-Distribution
+Distribution  
+```bash
 sw3#show spanning-tree summary
 Switch is in pvst mode
 Root bridge for: VLAN0001
@@ -251,8 +257,10 @@ VLAN0020                     1         0        0          4          5
 VLAN0030                     1         0        0          4          5
 ---------------------- -------- --------- -------- ---------- ----------
 4 vlans                      3         0        0         15         18
+```
 
-Access
+Access  
+```bash
 sw5#show spanning-tree summary
 Switch is in pvst mode
 Root bridge for: none
@@ -275,18 +283,18 @@ VLAN0020                     1         0        0          2          3
 VLAN0030                     1         0        0          1          2
 ---------------------- -------- --------- -------- ---------- ----------
 3 vlans                      3         0        0          5          8
+```
 
 
+# 🌞 Couper le routeur prioritaire
+Etant donné que mon ping depuis un vpcs ne fonctionne pas vers l'extérieur, je ping l'ip virtuelle. Si le R1 ou R2 coupent, l'autre prendra le relais. Ca revient au même que ping l'extérieur.  
 
-🌞 Couper le routeur prioritaire
-Etant donné que mon ping depuis un vpcs ne fonctionne pas vers l'extérieur, je ping l'ip virtuelle. Si le R1 ou R2 coupent, l'autre prendra le relais. Ca revient au même que ping l'extérieur.
-
-Qué pasa ?
-Ping 10.3.30.254 depuis vpcs5
-J'ai coupé le R1
-4 requêtes sont perdues
-R2 broadcast sa mac = 10.3.30.254 via ARP
-vpcs5 arrivent à reping 10.3.30.254
+Qué pasa ?  
+Ping 10.3.30.254 depuis vpcs5  
+J'ai coupé le R1  
+4 requêtes sont perdues  
+R2 broadcast sa mac = 10.3.30.254 via ARP  
+vpcs5 arrivent à reping 10.3.30.254  
 
 
-🌞 Couper un switch crucial dans la topo STP
+# 🌞 Couper un switch crucial dans la topo STP
