@@ -296,5 +296,6 @@ J'ai coupé le R1
 R2 broadcast sa mac = 10.3.30.254 via ARP  
 vpcs5 arrivent à reping 10.3.30.254  
 
+🦈 Capture ping_hsrp.pcap --> 
 
 # 🌞 Couper un switch crucial dans la topo STP
