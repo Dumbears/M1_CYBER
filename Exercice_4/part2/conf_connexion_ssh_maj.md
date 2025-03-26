@@ -2,13 +2,13 @@
 Host bastion
   Hostname 10.3.30.100
   User administrateur
-  IdentityFile "C:\Users\rgebel\.ssh\toto"
+  IdentityFile "C:\Users\rgebel\.ssh\new"
  
  Host r1
   ProxyJump bastion
   HostName 10.3.30.254
   User administrateur
-  IdentityFile "C:\Users\rgebel\.ssh\toto"
+  IdentityFile "C:\Users\rgebel\.ssh\new"
   KexAlgorithms +diffie-hellman-group14-sha1
   PubkeyAcceptedAlgorithms +ssh-rsa
   HostkeyAlgorithms +ssh-rsa
