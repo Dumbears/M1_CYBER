@@ -62,4 +62,4 @@ r1>
 ```  
 
 # 🌞 Modifier votre fichier SSH config
-Configuration du [.ssh modifiée](conf_connexion_ssh_modifiée) 
+Configuration du [.ssh modifiée](conf_connexion_ssh_maj.md) 
