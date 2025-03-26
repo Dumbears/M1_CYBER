@@ -15,8 +15,8 @@ interface Ethernet0/3
 
 # 🌞 Serveur SSH
 
-Status du [serveur SSH + écoute port 22](./sshd_status.md)  
-Status du [firewall + SSH ouvert](.firewall_status.md)  
+Status du [serveur SSH + écoute port 22](sshd_status.md)  
+Status du [firewall + SSH ouvert](firewall_status.md)  
 
 # 🌞 Connexion SSH
 Test de connexion  
@@ -62,4 +62,4 @@ r1>
 ```  
 
 # 🌞 Modifier votre fichier SSH config
-Configuration du [.ssh modifiée](./conf_connexion_ssh_modifiée) 
+Configuration du [.ssh modifiée](conf_connexion_ssh_modifiée) 
