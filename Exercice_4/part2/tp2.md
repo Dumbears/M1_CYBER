@@ -1,11 +1,11 @@
 
 # 🌞 Config réseau  
 
-branchée à un switch d'accès dans le VLAN30
+La machine linux est branchée à un switch d'accès dans le VLAN30
 
-elle porte l'adresse [IP 10.3.30.100](./ip_machine_linux.md)
+Elle porte l'adresse [IP 10.3.30.100](.ip_machine_linux.md)
 
-Branché sur le switch d'accès (sw7) port e0/3
+Branchée sur le switch d'accès (sw7) port e0/3
 ```bash
 interface Ethernet0/3
  no shutdown
